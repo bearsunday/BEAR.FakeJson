@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BEAR\FakeJson\Resource\Page;
+namespace BEAR\FakeResource\Resource\Page;
 
 use BEAR\Resource\ResourceObject;
 

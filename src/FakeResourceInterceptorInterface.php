@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace BEAR\FakeJson;
+namespace BEAR\FakeResource;
 
 use BEAR\Resource\ResourceObject;
 use Ray\Aop\MethodInterceptor;
 use Ray\Aop\MethodInvocation;
 
-interface FakeJsonInterceptorInterface extends MethodInterceptor
+interface FakeResourceInterceptorInterface extends MethodInterceptor
 {
     public function invoke(MethodInvocation $invocation): ResourceObject;
 }

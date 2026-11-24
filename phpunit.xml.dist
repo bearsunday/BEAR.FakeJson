@@ -7,7 +7,7 @@
     colors="true"
 >
     <testsuites>
-        <testsuite name="BEAR.StubJson test suite">
+        <testsuite name="BEAR.FakeResource test suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

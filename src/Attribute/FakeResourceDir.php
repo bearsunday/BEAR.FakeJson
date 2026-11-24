@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace BEAR\FakeJson\Attribute;
+namespace BEAR\FakeResource\Attribute;
 
 use Attribute;
 use Ray\Di\Di\Qualifier;
 
 #[Attribute(Attribute::TARGET_PARAMETER), Qualifier]
-final class FakeJsonDir
+final class FakeResourceDir
 {
 }

@@ -1,6 +1,6 @@
-# BEAR.FakeJson
+# BEAR.FakeResource
 
-Fake BEAR.Resource responses with JSON files for frontend development.
+Fake BEAR.Resource resource objects with JSON files for frontend development.
 
 ## Overview
 
@@ -16,7 +16,7 @@ This module allows frontend development to proceed before backend implementation
 ## Installation
 
 ```bash
-composer require bear/fake-json
+composer require bear/fake-resource
 ```
 
 ## Module Setup
@@ -27,14 +27,14 @@ Create a `FakeModule` for the fake context:
 // src/Module/FakeModule.php
 namespace MyVendor\MyApp\Module;
 
-use BEAR\FakeJson\FakeJsonModule;
+use BEAR\FakeResource\FakeResourceModule;
 use Ray\Di\AbstractModule;
 
 class FakeModule extends AbstractModule
 {
     protected function configure(): void
     {
-        $this->install(new FakeJsonModule(__DIR__ . '/../../var/fake'));
+        $this->install(new FakeResourceModule(__DIR__ . '/../../var/fake'));
     }
 }
 ```
