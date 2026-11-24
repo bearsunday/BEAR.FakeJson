@@ -2,30 +2,30 @@
 
 declare(strict_types=1);
 
-namespace BEAR\FakeJson;
+namespace BEAR\FakeResource;
 
-use BEAR\FakeJson\Resource\Page\Index;
+use BEAR\FakeResource\Resource\Page\Index;
 use BEAR\Resource\Module\ResourceModule;
 use PHPUnit\Framework\TestCase;
 use Ray\Di\AbstractModule;
 use Ray\Di\Injector;
 
-class FakeJsonTest extends TestCase
+class FakeResourceTest extends TestCase
 {
-    public function testFakeJsonReturned(): void
+    public function testFakeResourceReturned(): void
     {
-        $fakeJsonDir = __DIR__ . '/json';
-        $injector = new Injector(new class ($fakeJsonDir) extends AbstractModule {
+        $fakeResourceDir = __DIR__ . '/json';
+        $injector = new Injector(new class ($fakeResourceDir) extends AbstractModule {
             public function __construct(
-                public string $fakeJsonDir
+                public string $fakeResourceDir
             ) {
             }
 
             protected function configure(): void
             {
                 $this->bind(Index::class);
-                $this->install(new FakeJsonModule($this->fakeJsonDir));
-                $this->install(new ResourceModule('BEAR\FakeJson'));
+                $this->install(new FakeResourceModule($this->fakeResourceDir));
+                $this->install(new ResourceModule('BEAR\FakeResource'));
             }
         }, __DIR__ . '/tmp');
         $ro = $injector->getInstance(Index::class);

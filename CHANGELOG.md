@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+- Rename the package to `bear/fake-resource` and the namespace to `BEAR\FakeResource`
+- Rename `FakeJsonModule`, `FakeJsonInterceptor`, `FakeJsonInterceptorInterface` and `#[FakeJsonDir]` to `FakeResourceModule`, `FakeResourceInterceptor`, `FakeResourceInterceptorInterface` and `#[FakeResourceDir]`
+
 ## 0.1.0 - 2026-01-07
 
 Initial release as BEAR.FakeJson.

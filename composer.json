@@ -1,5 +1,5 @@
 {
-    "name": "bear/fake-json",
+    "name": "bear/fake-resource",
     "description": "Fake BEAR.Resource responses with JSON files",
     "license": "MIT",
     "authors": [
@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BEAR\\FakeJson\\": "src/"
+            "BEAR\\FakeResource\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BEAR\\FakeJson\\": [
+            "BEAR\\FakeResource\\": [
                 "tests",
                 "tests/Fake"
             ]

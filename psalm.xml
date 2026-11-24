@@ -15,7 +15,7 @@
     <issueHandlers>
         <UnusedClass>
             <errorLevel type="suppress">
-                <referencedClass name="BEAR\FakeJson\FakeJsonModule" />
+                <referencedClass name="BEAR\FakeResource\FakeResourceModule" />
             </errorLevel>
         </UnusedClass>
         <MissingOverrideAttribute errorLevel="suppress" />

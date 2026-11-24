@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BEAR\FakeJson;
+namespace BEAR\FakeResource;
 
-use BEAR\FakeJson\Attribute\FakeJsonDir;
-use BEAR\FakeJson\Exception\JsonFileException;
+use BEAR\FakeResource\Attribute\FakeResourceDir;
+use BEAR\FakeResource\Exception\JsonFileException;
 use BEAR\Resource\Annotation\AppName;
 use BEAR\Resource\ResourceObject;
 use JsonException;
@@ -25,12 +25,12 @@ use function substr;
 
 use const JSON_THROW_ON_ERROR;
 
-final class FakeJsonInterceptor implements FakeJsonInterceptorInterface
+final class FakeResourceInterceptor implements FakeResourceInterceptorInterface
 {
     /** @psalm-suppress PossiblyUnusedMethod */
     public function __construct(
         #[AppName] private string $appName,
-        #[FakeJsonDir] private string $fakeJsonDir
+        #[FakeResourceDir] private string $fakeResourceDir
     ) {
     }
 
@@ -70,6 +70,6 @@ final class FakeJsonInterceptor implements FakeJsonInterceptorInterface
         $namespacePath = substr($parent->getName(), strlen($this->appName) + strlen('\Resource'));
         $path = str_replace('\\', '/', $namespacePath);
 
-        return sprintf('%s%s.json', $this->fakeJsonDir, $path);
+        return sprintf('%s%s.json', $this->fakeResourceDir, $path);
     }
 }
