@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2026-11-25
 
 ### Changed
 - Rename the package to `bear/fake-resource` and the namespace to `BEAR\FakeResource`
